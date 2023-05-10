@@ -1,16 +1,27 @@
 import "./App.css";
-import { UserFormComponent } from "./Components/UserFormComponent";
+import { Routes, Route } from "react-router-dom";
+import {
+  AboutPage,
+  FeaturedProductsPage,
+  HomePage,
+  NewProductsPage,
+  ProductsPage,
+} from "./Components/NavigatingRoutesComponent";
 
 function App() {
   return (
-    <div className="App">
-      {/* <TabComponent>
-        <div title="Tab 1">Tab 1 Content</div>
-        <div title="Tab 2">Tab 2 Content</div>
-      </TabComponent> */}
-      <UserFormComponent />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="products" element={<ProductsPage />}>
+        <Route path="featured" element={<FeaturedProductsPage />} />
+        <Route path="new" element={<NewProductsPage />} />
+      </Route>
+    </Routes>
   );
 }
 
 export default App;
+
+// Note '/about' is absolute route
+// 'products' and 'featured are relative routes
