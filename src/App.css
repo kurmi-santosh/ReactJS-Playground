@@ -39,7 +39,7 @@
 nav {
   margin-top: 20px;
 }
-nav a.link {
+nav a.active {
   font-weight: bold;
   text-decoration: none;
 }
