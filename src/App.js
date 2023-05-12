@@ -1,8 +1,17 @@
 import "./App.css";
-import PostsComponent from "./Components/PostsComponent";
+import CountryCapitalsGame from "./Components/CountryCapitalsGame";
 
 function App() {
-  return <PostsComponent />;
+  return (
+    <CountryCapitalsGame
+      data={{
+        India: "NewDelhi",
+        China: "Beiging",
+        Pakisthan: "Lahore",
+        Australia: "Melborne",
+      }}
+    />
+  );
 }
 
 export default App;
