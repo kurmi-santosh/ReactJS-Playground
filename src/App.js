@@ -1,9 +1,8 @@
 import "./App.css";
-
-import StopWatchComponent from "./Components/StopWatchComponent";
+import PostsComponent from "./Components/PostsComponent";
 
 function App() {
-  return <StopWatchComponent />;
+  return <PostsComponent />;
 }
 
 export default App;
